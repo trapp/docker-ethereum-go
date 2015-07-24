@@ -1,4 +1,4 @@
-## docker container for the go-ethereum client
+# Docker Container for the go-ethereum Client
 
 This container runs the official go-ethereum client.
 
@@ -8,15 +8,15 @@ By default, it will unlock the first (primary) account based on the password fil
 
 To create the account do the following:
 
-1. Create the `pw` file
+### Create the `pw` file
 
     echo "<secure-password>" > pw
 
-2. Build the container
+### Build the container
 
     docker build -t go-ethereum .
 
-3. Create the first account (change /tmp/eth to your desired data folder)
+### Create the first account (change /tmp/eth to your desired data folder)
 
     docker run -it \
         -v /tmp/eth:/root/.ethereum \
@@ -25,7 +25,8 @@ To create the account do the following:
         go-ethereum  \
         --password /pw account new
 
-4. Ready to go. Run the container:
+### Ready to go. Run the container:
+
 
 	docker run -d \
         -v /tmp/eth:/root/.ethereum \
@@ -33,4 +34,4 @@ To create the account do the following:
         -p 0.0.0.0:8545:8545
         go-ethereum 
 
-        
+
