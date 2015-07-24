@@ -16,7 +16,9 @@ To create the account do the following:
 
     docker build -t go-ethereum .
 
-### Create the first account (change /tmp/eth to your desired data folder)
+### Create the first account
+
+Change `/tmp/eth` to your desired data folder
 
     docker run -it \
         -v /tmp/eth:/root/.ethereum \
