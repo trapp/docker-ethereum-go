@@ -2,13 +2,13 @@
 
 This container runs the official go-ethereum client.
 
-It has the *solc* complier enabled to compile Solidity contracts.
+It has the **solc** complier enabled to compile Solidity contracts.
 
 By default, it will unlock the first (primary) account based on the password file located in /pw.
 
 To create the account do the following:
 
-### Create the `pw` file
+### Create the pw file
 
     echo "<secure-password>" > pw
 
